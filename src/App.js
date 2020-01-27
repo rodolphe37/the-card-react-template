@@ -1,24 +1,29 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Loader from './components/Loader';
+import Menu from './components/Menu';
+import SiteHeader from './components/SiteHeader';
+import ContainerFluid from './components/ContainerFluid';
+import BarCode from './components/BarCode';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Loader />
+      <div class="tm-main-container">
+        <div class="tm-top-container">
+          <Menu /> 
+          <SiteHeader />
+        </div>
+       <ContainerFluid />
+        <div class="tm-bottom-container">
+          <BarCode />
+          <Footer />
+        </div>
+      </div>
+
     </div>
   );
 }
